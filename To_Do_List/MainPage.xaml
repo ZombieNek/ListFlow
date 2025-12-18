@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="To_Do_List.MainPage"
+             BackgroundColor="#212121">
+
+    <!--основная верстка-->
+    <Grid RowDefinitions="Auto, *, Auto">
+
+        <!--шапка-->
+        <Grid Grid.Row="0"
+            ColumnDefinitions="80, 55, *, 50"
+            BackgroundColor="#4CAF50"
+            RowDefinitions="*"
+            HeightRequest="90">
+
+            <!--иконка на шапке-->
+            <Image Source="cart.png" 
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   HeightRequest="46"
+                   WidthRequest="46"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center">
+
+            </Image>
+
+            <!--текст на шапке-->
+            <Label Text="Мои списки"
+                   Grid.Row="1"
+                   Grid.Column="2"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="36"
+                   FontFamily="MyFontRegular">
+
+            </Label>
+
+        </Grid>
+
+        <!--средняя листаемая колонка-->
+        <CollectionView Grid.Row="2"
+                        BackgroundColor="#2a2a2a"
+                        >
+
+
+
+        </CollectionView>
+
+
+
+        <!--подвал-->
+        <Grid Grid.Row="3"
+              ColumnDefinitions="105, 95, 105, 105"
+              RowDefinitions="*, auto"
+              HeightRequest="80"
+              Margin="5, 15">
+
+            <!--панель под кнопки-->
+            <Grid Grid.Column="1"
+                  Grid.Row="1">
+
+                <BoxView BackgroundColor="#4CAF50"
+                         WidthRequest="295"
+                         HeightRequest="80"
+                         CornerRadius="40"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"/>
+            </Grid>
+
+            <!--аккаунт, вход -->
+            <Grid Grid.Column="0"
+                  Grid.Row="1">
+
+                <!--круг под кнопку-->
+                <Button BackgroundColor="Transparent"
+                        WidthRequest="80"
+                        HeightRequest="80"
+                        CornerRadius="40"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+
+                <!--изображение-->
+                <Image Source="men.png" 
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    HeightRequest="70"
+                    WidthRequest="70"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center">
+                </Image>
+
+
+            </Grid>
+
+            <!--кнопка настроек-->
+            <Grid Grid.Column="1"
+                  Grid.Row="1">
+
+
+
+                <Button BackgroundColor="Transparent"
+                         WidthRequest="80"
+                         HeightRequest="80"
+                         CornerRadius="40"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"/>
+
+                <!--изображение-->
+                <Image Source="settings.png" 
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    HeightRequest="77"
+                    WidthRequest="77"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center">
+                </Image>
+
+            </Grid>
+
+
+            <!--кнопка информации о программе и разработчиках-->
+            <Grid Grid.Column="2"
+                  Grid.Row="1">
+
+                <!--круг под кнопку-->
+                <Button BackgroundColor="Transparent"
+                        WidthRequest="80"
+                        HeightRequest="80"
+                        CornerRadius="40"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+
+                <!--изображение-->
+                <Image Source="information.png" 
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       HeightRequest="63"
+                       WidthRequest="63"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center">
+                </Image>
+
+            </Grid>
+
+            <!--кнопка добавления-->
+            <Grid Grid.Column="3"
+                  Grid.Row="0"
+                  HeightRequest="90">
+
+                <!--кнопка-->
+                <Button BackgroundColor="#4CAF50"
+                        WidthRequest="80"
+                        HeightRequest="80"
+                        CornerRadius="40"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+
+                <!--изображение на кнопке-->
+                <Image Source="enter.png" 
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       HeightRequest="85"
+                       WidthRequest="85"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center">
+                </Image>
+
+            </Grid>
+        </Grid>
+    </Grid>
+
+</ContentPage>
