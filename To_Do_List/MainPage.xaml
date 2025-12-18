@@ -5,14 +5,15 @@
              BackgroundColor="#212121">
 
     <!--основная верстка-->
-    <Grid RowDefinitions="Auto, *, Auto">
+          <!---количество строк-->
+    <Grid RowDefinitions="Auto, *, Auto, Auto ">
 
         <!--шапка-->
         <Grid Grid.Row="0"
-            ColumnDefinitions="80, 55, *, 50"
+            ColumnDefinitions="0.3*, 0.4*, 1*, 0.3*"
             BackgroundColor="#4CAF50"
             RowDefinitions="*"
-            HeightRequest="90">
+            HeightRequest="65">
 
             <!--иконка на шапке-->
             <Image Source="cart.png" 
@@ -32,38 +33,67 @@
                    TextColor="White"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
-                   FontSize="36"
-                   FontFamily="MyFontRegular">
+                   FontSize="35"
+                   FontFamily="MyFontRegular"
+                   FontAutoScalingEnabled="True">
 
             </Label>
 
         </Grid>
 
         <!--средняя листаемая колонка-->
-        <CollectionView Grid.Row="2"
-                        BackgroundColor="#2a2a2a"
-                        >
+        <CollectionView Grid.Row="1"
+                        Margin="0,0,0,-34">
 
-
+        
 
         </CollectionView>
+
+        <!--кнопка добавления-->
+        <Grid ColumnDefinitions = "0.432*, 0.297*, 0.80*, 0.90*"
+              Grid.Row="2"
+              Margin="0,0,0,-30">
+
+            <Grid Grid.Column="3">
+                
+                <!--кнопка-->
+                <Button BackgroundColor="#4CAF50"
+                        WidthRequest="70"
+                        HeightRequest="70"
+                        CornerRadius="40"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+
+                <!--изображение на кнопке-->
+                <Image Source="enter.png" 
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       HeightRequest="70"
+                       WidthRequest="70"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center">
+                </Image>
+                
+            </Grid>
+            
+        </Grid>
 
 
 
         <!--подвал-->
         <Grid Grid.Row="3"
-              ColumnDefinitions="105, 95, 105, 105"
+              ColumnDefinitions="1.38*, 1*, 1.23*, 3.00*"
               RowDefinitions="*, auto"
-              HeightRequest="80"
-              Margin="5, 15">
+              HeightRequest="50"
+              Margin="8, 5">
 
             <!--панель под кнопки-->
             <Grid Grid.Column="1"
                   Grid.Row="1">
 
                 <BoxView BackgroundColor="#4CAF50"
-                         WidthRequest="295"
-                         HeightRequest="80"
+                         WidthRequest="220"
+                         HeightRequest="64"
                          CornerRadius="40"
                          HorizontalOptions="Center"
                          VerticalOptions="Center"/>
@@ -75,8 +105,8 @@
 
                 <!--круг под кнопку-->
                 <Button BackgroundColor="Transparent"
-                        WidthRequest="80"
-                        HeightRequest="80"
+                        WidthRequest="60"
+                        HeightRequest="60"
                         CornerRadius="40"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"/>
@@ -85,8 +115,8 @@
                 <Image Source="men.png" 
                     Grid.Row="1"
                     Grid.Column="1"
-                    HeightRequest="70"
-                    WidthRequest="70"
+                    HeightRequest="60"
+                    WidthRequest="60"
                     VerticalOptions="Center"
                     HorizontalOptions="Center">
                 </Image>
@@ -101,8 +131,8 @@
 
 
                 <Button BackgroundColor="Transparent"
-                         WidthRequest="80"
-                         HeightRequest="80"
+                         WidthRequest="60"
+                         HeightRequest="60"
                          CornerRadius="40"
                          HorizontalOptions="Center"
                          VerticalOptions="Center"/>
@@ -111,8 +141,8 @@
                 <Image Source="settings.png" 
                     Grid.Row="1"
                     Grid.Column="1"
-                    HeightRequest="77"
-                    WidthRequest="77"
+                    HeightRequest="67"
+                    WidthRequest="67"
                     VerticalOptions="Center"
                     HorizontalOptions="Center">
                 </Image>
@@ -126,8 +156,8 @@
 
                 <!--круг под кнопку-->
                 <Button BackgroundColor="Transparent"
-                        WidthRequest="80"
-                        HeightRequest="80"
+                        WidthRequest="60"
+                        HeightRequest="60"
                         CornerRadius="40"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"/>
@@ -136,38 +166,15 @@
                 <Image Source="information.png" 
                        Grid.Row="1"
                        Grid.Column="1"
-                       HeightRequest="63"
-                       WidthRequest="63"
+                       HeightRequest="57"
+                       WidthRequest="57"
                        VerticalOptions="Center"
                        HorizontalOptions="Center">
                 </Image>
 
             </Grid>
 
-            <!--кнопка добавления-->
-            <Grid Grid.Column="3"
-                  Grid.Row="0"
-                  HeightRequest="90">
-
-                <!--кнопка-->
-                <Button BackgroundColor="#4CAF50"
-                        WidthRequest="80"
-                        HeightRequest="80"
-                        CornerRadius="40"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"/>
-
-                <!--изображение на кнопке-->
-                <Image Source="enter.png" 
-                       Grid.Row="1"
-                       Grid.Column="1"
-                       HeightRequest="85"
-                       WidthRequest="85"
-                       VerticalOptions="Center"
-                       HorizontalOptions="Center">
-                </Image>
-
-            </Grid>
+           
         </Grid>
     </Grid>
 
