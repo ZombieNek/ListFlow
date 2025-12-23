@@ -14,7 +14,7 @@ namespace To_Do_List
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                     fonts.AddFont("Jun_Italic.ttf", "MyFontSemibold");
-                    fonts.AddFont("Jun_Regular.ttf", "MyFontRegula");
+                    fonts.AddFont("Jun_Regular.ttf", "MyFontRegular");
                     
                 });
 

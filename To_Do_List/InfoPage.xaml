@@ -4,7 +4,8 @@
              x:Class="To_Do_List.InfoPage"
              BackgroundColor="#212121">
 
-    <Grid RowDefinitions="auto, *">
+    <!--основная верстка-->
+    <Grid RowDefinitions="auto, *, auto">
 
         <!--шапка-->
         <Grid Grid.Row="0"
@@ -15,67 +16,158 @@
             
             
             <!--текст на шапке-->
-            <Label Text="Информация о разработчиках"
+            <Label Text="О нас"
                    Grid.Row="1"
                    Grid.Column="2"
                    TextColor="White"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
-                   FontSize="26"
+                   FontSize="30"
                    FontFamily="MyFontRegular"
-                   FontAutoScalingEnabled="True">
-            </Label>
+                   FontAutoScalingEnabled="True"/>
+
 
         </Grid>
 
         <!--листаемая панель с информацией-->
         <ScrollView Grid.Row="1">
-            <Grid RowDefinitions="auto, auto, auto, auto, auto">
+            <VerticalStackLayout>
+                    
+                        <!--вторая часть первого текста-->
+                <Label Text="ListFlow — это ваш умный помощник для покупок. 
+                       Современный дизайн, удобный для управления одной рукой. 
+                       Создавайте списки, делитесь ими с семьёй в один клик и 
+                       настраивайте всё под себя."
+                       FontSize="25"
+                       FontFamily="MyFontRegular"
+                       FontAutoScalingEnabled="True"
+                       TextColor="#FFFFFFFF"                       
+                       HorizontalOptions="Center"
+                       Margin="5,6,5,6"/>
+
+                <!--разделяющая полоса-->
+                <BoxView BackgroundColor="#4CAF50"
+                         WidthRequest="1000"
+                         HeightRequest="15"/>
+
+                <!--Обратная связь-->
+                            <!--цвет фона-->
+                <BoxView BackgroundColor="#262626"/>
+
+                <Label Text="Обратная связь"
+                       FontSize="25"
+                       FontFamily="MyFontRegular"
+                       FontAutoScalingEnabled="True"
+                       TextColor="#FFFFFFFF"
+                       Grid.Row="3"
+                       Margin="5,2,5,0"/>
+
+                <Label Text="Поддержка: ListFlow@gmail.com"
+                       FontSize="22"
+                       FontFamily="MyFontRegular"
+                       FontAutoScalingEnabled="True"
+                       TextColor="#FFFFFFFF"
+                       Grid.Row="3"
+                       Margin="5,2,5,0"/>
                 
-                <!--первый блок текста-->
-                <Label Text="Здесь будет первый блок с иформацией"
-                       FontSize="30"
+                <Label Text="Наш сайт: ссылка на сайт"
+                       FontSize="22"
                        FontFamily="MyFontRegular"
                        FontAutoScalingEnabled="True"
                        TextColor="#FFFFFFFF"
-                       Grid.Row="0"/>
-
+                       Grid.Row="3"
+                       Margin="5,2,5,6"/>
 
                 <!--разделяющая полоса-->
                 <BoxView BackgroundColor="#4CAF50"
                          WidthRequest="1000"
-                         HeightRequest="15"                         
-                         Grid.Row="1"/>
+                         HeightRequest="15"/>
 
-                <!--второй блок текста-->
-                <Label Text="Здесь будет второй блок с иформацией"
-                       FontSize="30"
+                <!--Соцсети-->
+                <Label Text="Мы в соцсетях"
+                       FontSize="25"
                        FontFamily="MyFontRegular"
                        FontAutoScalingEnabled="True"
                        TextColor="#FFFFFFFF"
-                       Grid.Row="2"/>
+                       Grid.Row="3"
+                       Margin="5,2,5,0"/>
+                
+                <Label Text="Telegram:"
+                       FontSize="22"
+                       FontFamily="MyFontRegular"
+                       FontAutoScalingEnabled="True"
+                       TextColor="#FFFFFFFF"
+                       Margin="5,2,5,0"/>
 
+                <Label Text="ВКонтакте:"
+                       FontSize="22"
+                       FontFamily="MyFontRegular"
+                       FontAutoScalingEnabled="True"
+                       TextColor="#FFFFFFFF"
+                       Margin="5,2,5,6"/>
 
                 <!--разделяющая полоса-->
                 <BoxView BackgroundColor="#4CAF50"
                          WidthRequest="1000"
-                         HeightRequest="15"                         
-                         Grid.Row="3"/>
+                         HeightRequest="15"/>
 
-                <!--третий блок текста-->
-                <Label Text="Дальнейшие блоки с иформацией"
-                       FontSize="30"
+                <!--четвертый блок текста-->
+                <Label Text="Правовая информация"
+                       FontSize="25"
                        FontFamily="MyFontRegular"
                        FontAutoScalingEnabled="True"
                        TextColor="#FFFFFFFF"
-                       Grid.Row="4"/>
+                       Margin="5,6,5,6"/>
 
-            </Grid>
+                <Label Text="Политика конфиденциальности"
+                       FontSize="22"
+                       FontFamily="MyFontRegular"
+                       FontAutoScalingEnabled="True"
+                       TextColor="#FFFFFFFF"
+                       Margin="5,2,5,0"/>
+                
+                <Label Text="Пользовательское соглашение"
+                       FontSize="22"
+                       FontFamily="MyFontRegular"
+                       FontAutoScalingEnabled="True"
+                       TextColor="#FFFFFFFF"
+                       Margin="5,2,5,6"/>
+
+                <!--разделяющая полоса-->
+                <BoxView BackgroundColor="#4CAF50"
+                         WidthRequest="1000"
+                         HeightRequest="15"/>
+
+                <Label Text="ListFlow  Версия 1.0"
+                       FontSize="22"
+                       FontFamily="MyFontRegular"
+                       FontAutoScalingEnabled="True"
+                       TextColor="#FFFFFFFF"
+                       Margin="5,6,5,0"/>
+
+                <Label Text="Искусство организации покупок"
+                       FontSize="22"
+                       FontFamily="MyFontRegular"
+                       FontAutoScalingEnabled="True"
+                       TextColor="#FFFFFFFF"
+                       Margin="5,2,5,0"/>
+
+            </VerticalStackLayout>
             
-            
+
         </ScrollView>
+
+        
+        
+        <!--подвал-->
+        <Grid Grid.Row="2"
+              ColumnDefinitions="auto, auto"
+              BackgroundColor="#4CAF50"
+              RowDefinitions="*"
+              HeightRequest="65">
+                             
+        </Grid>
         
     </Grid>
-
 
 </ContentPage>
