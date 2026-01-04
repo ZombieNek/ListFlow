@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="To_Do_List.EnterPage"
+             BackgroundColor="#212121">
+
+    <!--основная верстка-->
+    <Grid RowDefinitions="auto, *, auto">
+
+        <!--шапка-->
+        <Grid Grid.Row="0"
+              ColumnDefinitions="*"
+              BackgroundColor="#4CAF50"
+              RowDefinitions="*"
+              HeightRequest="65">
+
+
+            <!--текст на шапке-->
+            <Label Text="Добавление записи"
+                   Grid.Row="1"
+                   Grid.Column="2"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="30"
+                   FontFamily="MyFontRegular"
+                   FontAutoScalingEnabled="True"/>
+
+
+        </Grid>
+
+
+        <!--средняя панель с функционалом для добавления-->
+        <ScrollView Grid.Row="1"
+                 Margin="0,0,0,-34">
+
+        </ScrollView>
+
+        <!--нижняя панель с кнопками подтверждения-->
+        <Grid ColumnDefinitions = "0.5*, 0.2*, 1.4*, 0.9*"
+              Grid.Row="2"
+              Margin="0,0,20,50">
+
+            <Grid Grid.Column="3"
+                  ColumnDefinitions="*, *">
+
+                <!--панель под кнопки-->
+                <BoxView BackgroundColor="#4CAF50"
+                 WidthRequest="125"
+                 HeightRequest="64"
+                 CornerRadius="40"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 Grid.ColumnSpan="2"/>
+
+
+                <!--кнока отказа-->
+                <Grid Grid.Column="0">
+
+                    <!--круг под кнопку-->
+                    <Button BackgroundColor="Transparent"
+                            WidthRequest="60"
+                            HeightRequest="60"
+                            CornerRadius="40"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+
+                    <!--изображение-->
+                    <Image Source="men.png" 
+                           Grid.Row="1"
+                           Grid.Column="1"
+                           HeightRequest="60"
+                           WidthRequest="60"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"/>
+                </Grid>
+
+                <!--кнока подтверждения-->
+                <Grid Grid.Column="1">
+
+                    <!--круг под кнопку-->
+                    <Button BackgroundColor="Transparent"
+                            WidthRequest="60"
+                            HeightRequest="60"
+                            CornerRadius="40"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+
+                    <!--изображение-->
+                    <Image Source="men.png" 
+                           Grid.Row="1"
+                           Grid.Column="1"
+                           HeightRequest="60"
+                           WidthRequest="60"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+
+</ContentPage>

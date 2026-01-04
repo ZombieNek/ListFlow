@@ -154,11 +154,8 @@
 
             </VerticalStackLayout>
             
-
         </ScrollView>
-
-        
-        
+       
         <!--подвал-->
         <Grid Grid.Row="2"
               ColumnDefinitions="auto, auto"

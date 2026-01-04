@@ -9,7 +9,7 @@
 
         <!--шапка-->
         <Grid Grid.Row="0"
-            ColumnDefinitions="0.3*, 0.4*, 1*, 0.3*"
+            ColumnDefinitions="0.3*, 0.2*, 1*, 0.3*"
             BackgroundColor="#4CAF50"
             RowDefinitions="*"
             HeightRequest="65">
@@ -57,7 +57,8 @@
                         HeightRequest="70"
                         CornerRadius="40"
                         HorizontalOptions="Center"
-                        VerticalOptions="Center"/>
+                        VerticalOptions="Center"
+                        Clicked="EnterButtonClick"/>
 
                 <!--изображение на кнопке-->
                 <Image Source="enter.png" 
@@ -104,7 +105,8 @@
                         HeightRequest="60"
                         CornerRadius="40"
                         HorizontalOptions="Center"
-                        VerticalOptions="Center"/>
+                        VerticalOptions="Center"
+                        Clicked="AccountButtonClick"/>
 
                 <!--изображение-->
                 <Image Source="men.png" 
@@ -126,7 +128,8 @@
                          HeightRequest="60"
                          CornerRadius="40"
                          HorizontalOptions="Center"
-                         VerticalOptions="Center"/>
+                         VerticalOptions="Center"
+                         Clicked="SettingsButtonClick"/>
 
                 <!--изображение-->
                 <Image Source="settings.png" 
@@ -138,7 +141,6 @@
                     HorizontalOptions="Center"/>
 
             </Grid>
-
 
             <!--кнопка информации о программе и разработчиках-->
             <Grid Grid.Column="0"
