@@ -16,7 +16,7 @@
 
 
             <!--текст на шапке-->
-            <Label Text="Добавление записи"
+            <Label Text="Новый список"
                    Grid.Row="1"
                    Grid.Column="2"
                    TextColor="White"
@@ -32,69 +32,113 @@
 
         <!--средняя панель с функционалом для добавления-->
         <ScrollView Grid.Row="1"
-                 Margin="0,0,0,-34">
+                    Margin="0,0,0,-34">
+            <Grid ColumnDefinitions="0.005*, *, 0.005*"
+                  RowDefinitions="auto, auto, auto">
 
+                <!--название списка-->
+                <Frame BackgroundColor="#383838"
+                   BorderColor="#383838"
+                   CornerRadius="15"
+                   Padding="20"
+                   HasShadow="True"                   
+                   HorizontalOptions="Fill"
+                   Grid.Column="1"
+                   Grid.Row="0"
+                   Margin="5,35,5,5">
+
+                    <VerticalStackLayout>
+                        <Label Text="Название списка"
+                                Grid.Row="1"
+                                Grid.Column="2"
+                                TextColor="White"
+                                FontSize="25"
+                                FontFamily="MyFontRegular"
+                                FontAutoScalingEnabled="True"/>
+                    
+                        <Entry Placeholder="Например: продукты на неделю"
+                               TextColor="White"
+                               BackgroundColor="#3A3A3A"
+                               PlaceholderColor="#888888"
+                               FontSize="20"
+                               FontFamily="MyFontRegular"/>
+                        
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!--добавление элементов в список-->
+                <Frame BackgroundColor="#383838"
+                       BorderColor="#383838"
+                       CornerRadius="15"
+                       Padding="20"
+                       HasShadow="True"                     
+                       HorizontalOptions="Fill"
+                       Grid.Column="1"
+                       Grid.Row="1"
+                       Margin="5,35,5,0">
+
+                    <VerticalStackLayout>
+                        <Label Text="Элементы списка"
+                               Grid.Row="1"
+                               Grid.Column="2"
+                               TextColor="White"
+                               FontSize="25"
+                               FontFamily="MyFontRegular"
+                               FontAutoScalingEnabled="True"/>
+
+                        <Button BackgroundColor="#4CAF50"
+                                WidthRequest="350"
+                                HeightRequest="35"
+                                CornerRadius="40"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                Text="+ добавить товар"
+                                TextColor="White"
+                                FontSize="20"
+                                FontFamily="MyFontRegular"
+                                FontAutoScalingEnabled="True"
+                                Margin="3"/>
+
+                    </VerticalStackLayout>
+                </Frame>
+                
+            </Grid>
+            
         </ScrollView>
 
-        <!--нижняя панель с кнопками подтверждения-->
+        <!--кнока сохранения-->
         <Grid ColumnDefinitions = "0.5*, 0.2*, 1.4*, 0.9*"
               Grid.Row="2"
-              Margin="0,0,20,50">
+              Margin="0,0,20,70">
 
-            <Grid Grid.Column="3"
-                  ColumnDefinitions="*, *">
+            <Grid Grid.Column="3">
 
-                <!--панель под кнопки-->
+                <!--панель под кнопку-->
                 <BoxView BackgroundColor="#4CAF50"
-                 WidthRequest="125"
+                 WidthRequest="140"
                  HeightRequest="64"
                  CornerRadius="40"
                  HorizontalOptions="Center"
                  VerticalOptions="Center"
                  Grid.ColumnSpan="2"/>
 
+                    <!--сама кнопка-->
+                <Button BackgroundColor="Transparent"
+                        WidthRequest="140"
+                        HeightRequest="64"
+                        CornerRadius="40"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
 
-                <!--кнока отказа-->
-                <Grid Grid.Column="0">
+                    <!--текст на кнопке-->
+                <Label Text="Сохранить"
+                       TextColor="White"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="20"
+                       FontFamily="MyFontRegular"
+                       FontAutoScalingEnabled="True"/>
 
-                    <!--круг под кнопку-->
-                    <Button BackgroundColor="Transparent"
-                            WidthRequest="60"
-                            HeightRequest="60"
-                            CornerRadius="40"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"/>
-
-                    <!--изображение-->
-                    <Image Source="men.png" 
-                           Grid.Row="1"
-                           Grid.Column="1"
-                           HeightRequest="60"
-                           WidthRequest="60"
-                           VerticalOptions="Center"
-                           HorizontalOptions="Center"/>
-                </Grid>
-
-                <!--кнока подтверждения-->
-                <Grid Grid.Column="1">
-
-                    <!--круг под кнопку-->
-                    <Button BackgroundColor="Transparent"
-                            WidthRequest="60"
-                            HeightRequest="60"
-                            CornerRadius="40"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"/>
-
-                    <!--изображение-->
-                    <Image Source="men.png" 
-                           Grid.Row="1"
-                           Grid.Column="1"
-                           HeightRequest="60"
-                           WidthRequest="60"
-                           VerticalOptions="Center"
-                           HorizontalOptions="Center"/>
-                </Grid>
             </Grid>
         </Grid>
     </Grid>

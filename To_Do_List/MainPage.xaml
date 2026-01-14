@@ -74,8 +74,6 @@
             
         </Grid>
 
-
-
         <!--подвал-->
         <Grid Grid.Row="3"
               ColumnDefinitions="1.38*, 1*, 1.23*, 3.00*"
