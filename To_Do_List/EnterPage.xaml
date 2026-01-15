@@ -86,6 +86,13 @@
                                FontFamily="MyFontRegular"
                                FontAutoScalingEnabled="True"/>
 
+                        <!--панель для добавления записей-->
+                        <VerticalStackLayout x:Name="DynamicPanelsContainer"
+                             Spacing="10">
+                            
+                            
+                        </VerticalStackLayout>
+
                         <Button BackgroundColor="#4CAF50"
                                 WidthRequest="350"
                                 HeightRequest="35"
@@ -97,7 +104,8 @@
                                 FontSize="20"
                                 FontFamily="MyFontRegular"
                                 FontAutoScalingEnabled="True"
-                                Margin="3"/>
+                                Margin="3"
+                                Clicked="OnAddItemClicked"/>
 
                     </VerticalStackLayout>
                 </Frame>
